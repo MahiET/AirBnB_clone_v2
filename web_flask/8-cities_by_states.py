@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+"""Starts a Flask web application.
+The application listens on 0.0.0.0, port 5000.
+Routes:
+    /cities_by_states: HTML page with a list of all states and related cities.
+"""
+
 from models import storage
 from models.state import State
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 
@@ -20,4 +27,4 @@ def state_info():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0')
