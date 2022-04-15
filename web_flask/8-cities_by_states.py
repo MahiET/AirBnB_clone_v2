@@ -20,7 +20,7 @@ def appcontext_teardown(self):
 
 
 @app.route('/cities_by_states', strict_slashes=False)
-def states():
+def  cities_by_states():
     """Display a HTML page inside the tag BODY"""
     return render_template('8-cities_by_states.html',
                            states=storage.all(State))
